@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="bs">
+
+<head>
+    <title>UNIBANS | Kontakt</title>
+    <meta name="description" content="This is the description">
+    <link rel="stylesheet" href="css/styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    9
+    <!-- jQUERY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+
+    <!-- ALERT SWEAT   -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!-- BOOTSTRAP  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+
+</head>
+
+<body>
+    <style>
+        .navbar {
+            background-color: #333;
+            position: fixed;
+            /* Set the navbar to fixed position */
+            top: 0;
+            /* Position the navbar at the top of the page */
+            width: 100%;
+            /* Full width */
+        }
+
+        .content-section {
+            padding-top: 50px;
+        }
+
+        #contact input[type="text"] {
+            font-family: 'Sulphur Point' !important;
+        }
+
+         /* Dropdown Button */
+         .dropbtn {
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+        }
+
+        /* The container <div> - needed to position the dropdown content */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Dropdown Content (Hidden by Default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        /* Links inside the dropdown */
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {
+            background-color: #ddd
+        }
+        @media screen and (max-width: 820px) {
+            .telefon {
+                display: none;
+            }
+
+            .navbar-nav a {
+                transition: none;
+            }
+
+            .navbar-nav a:hover,
+            .navbar-nav div:hover {
+                color: #007BFF !important;
+                transform: none;
+            }
+
+            .dropdown a.btn {
+               position: absolute;
+               left: 70px;
+               top: -40px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="css/contact.css">
+    <header class="main-header">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <h1 style="margin-right: 20px;"><a href="index.html"> UNI<span>BANS</span> </a></h1>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link" href="index.html">POČETNA</a>
+                    <a class="nav-item nav-link" href="store.html">KATALOG</a>
+                    <div class="dropdown">
+                        <a class="btn" onclick="otvoriDropdown()">
+                            <i class="fa fa-caret-down" style="margin-left: -15px;"></i>
+                        </a>
+                        <div class="dropdown-content" id="dropdown-content">
+                            <a href="store.html#pisanje">Pribor za pisanje</a>
+                            <a href="store.html#biljeske">Bilješke</a>
+                            <a href="store.html#ostalo">Ostalo</a>
+                        </div>
+                    </div>
+                    <a class="nav-item nav-link" href="about.html">O NAMA</a>
+                    <a class="nav-item nav-link active" href="contact.html">KONTAKT</a>
+                    <a class="nav-item nav-link" onclick="otvoriPretragu()"><img src="img-index/iconS.png"
+                            style="width: 20px;" alt="search">PRETRAŽIVANJE</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="content-section container grid">
+        <div class="container">
+            <form id="contact" onsubmit="fun()">
+                <h3>Kontaktirajte nas</h3>
+                <h4>Kontaktirajte nas i dobijate odgovor u roku 24h!</h4>
+                <fieldset>
+                    <input placeholder="Ime i prezime" id="ime" name="name" type="text" tabindex="1" minlength="3"
+                        autofocus required>
+                </fieldset>
+                <fieldset>
+                    <input placeholder="E-mail" id="mail" name="email" type="email" tabindex="2" required>
+                </fieldset>
+                <fieldset>
+                    <input placeholder="Telefon" id="tel" type="tel" name="tel" tabindex="3" required>
+                </fieldset>
+
+                <fieldset>
+                    <textarea placeholder="Ukucajte Vašu poruku (minimalno 20 karaktera)" id="poruka" name="message"
+                        tabindex="5" required></textarea>
+                </fieldset>
+                <fieldset style="text-align: center;">
+                    <button name="submit" type="submit" id="contact-submit">POTVRDI</button>
+                </fieldset>
+            </form>
+        </div>
+        <div class="mapa">
+            <h3>Pronađite nas na lokaciji:</h3>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2402.207111146831!2d18.37188233071651!3d43.84706566667235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4758c90d64dea0a3%3A0xad7819b2fc50e41d!2sMilana%20Preloga%2012%2C%20Sarajevo%2071000!5e0!3m2!1shr!2sba!4v1575200452207!5m2!1shr!2sba"
+                frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container main-footer-container">
+            <h1 class="telefon" style="position:absolute; margin-top: 25px; left: 200px;"><a href="index.html">
+                    UNI<span>BANS</span> </a></h1>
+            <ul class="nav footer-nav" style="display: block;">
+                <li><i class="fa fa-phone-square"></i> 061 136 603
+                </li>
+                <li><i class="fa fa-envelope"></i> unibans@prodaja.com
+                </li>
+                <li><i class="fa fa-clock-o"></i> Pon-Pet: 8:00-16:00
+                </li>
+                <li><i class="fa fa-search"></i> Milana Preloga 12</li>
+            </ul>
+        </div>
+    </footer>
+    <script src="js/validation.js"></script>
+    <script src="js/search.js"></script>
+    <script>
+        var i = 0;
+
+        function otvoriDropdown() {
+            if (i == 0) {
+                document.getElementById("dropdown-content").style.display = "block";
+                i = 1;
+                return;
+            }
+            if (i == 1) {
+                document.getElementById("dropdown-content").style.display = "none";
+                i = 0;
+                return;
+            }
+        }
+    </script>
+</body>
+
+</html>

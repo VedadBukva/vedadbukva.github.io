@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>UNIBANS | O nama</title>
+    <meta name="description" content="This is the description">
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+</head>
+
+<body>
+    <style>
+        .navbar {
+            background-color: #333;
+            position: fixed;
+            /* Set the navbar to fixed position */
+            top: 0;
+            /* Position the navbar at the top of the page */
+            width: 100%;
+            /* Full width */
+        }
+
+        p {
+            color: black;
+            font-size: 20px;
+        }
+
+        .main-footer {
+            opacity: 0.8;
+        }
+
+        .content-section {
+            padding-top: 50px;
+        }
+
+         /* Dropdown Button */
+         .dropbtn {
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+        }
+
+        /* The container <div> - needed to position the dropdown content */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Dropdown Content (Hidden by Default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        /* Links inside the dropdown */
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {
+            background-color: #ddd
+        }
+    </style>
+    <header class="main-header">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <h1 style="margin-right: 20px;"><a href="index.html"> UNI<span>BANS</span> </a></h1>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link" href="index.html">POČETNA</a>
+                    <a class="nav-item nav-link" href="store.html">KATALOG</a>
+                    <div class="dropdown">
+                        <a class="btn" onclick="otvoriDropdown()">
+                            <i class="fa fa-caret-down" style="margin-left: -15px;"></i>
+                        </a>
+                        <div class="dropdown-content" id="dropdown-content">
+                            <a href="store.html#pisanje">Pribor za pisanje</a>
+                            <a href="store.html#biljeske">Bilješke</a>
+                            <a href="store.html#ostalo">Ostalo</a>
+                        </div>
+                    </div>
+                    <a class="nav-item nav-link active" href="about.html">O NAMA</a>
+                    <a class="nav-item nav-link" href="contact.html">KONTAKT</a>
+                    <a class="nav-item nav-link" onclick="otvoriPretragu()"><img src="img-index/iconS.png"
+                            style="width: 20px;" alt="search">PRETRAŽIVANJE</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="content-section container">
+        <h2 class="section-header"
+            style="margin-top: 40px; margin-bottom: 30px; text-align: center; color: purple; font-weight: 600;">O nama
+        </h2>
+
+        <p> Kancelarijski materijal je od suštinskog značaja za svakodnevno vođenje Vašeg poslovanja. Predmeti kao što
+            su olovke, papir, note blokovi, flomasteri, kalkulatori i druga kancelarijska oprema, kao što su štampači,
+            moraju biti dostupni zaposlenima
+            da rade produktivno i efikasno. </p>
+        <p> Kada tražite artikle koji su vam potrebni, pobrinite se da su kvalitetni. Ukoliko vaša kompanija šalje mnogo
+            pošte, razmotrite tip koverata koji vam je potreban ili ako su Vaši uposlenici često na telefonu, razmislite
+            o vrsti notes blokova, koji
+            će vam biti najpotrebniji. </p>
+        <p> Ako u bilo kom trenutku niste sigurni da li će Vaši uspolenici da završe posao efikasno, pitajte ih s
+            vremena na vrijeme da li postoji nešto što bi im olakšalo posao ili ako im nešto nedostaje, a da je ključno
+            za njihov posao. Međutim, pronalaženje
+            dobavljača, koje može da zadovolji sve vaše potrebe za nabavkom kancelarijske opreme, a da pritom zadrži
+            niske cijene i da je visok nivo kvaliteta, teško je doći. UNIBANS će se pobrinuti za Vas i pronaći najbolje
+            moguće rješenje koje odgovara
+            vašim potrebama u kancelariji.</p>
+        <P> Od osnovnih olovaka i markera do složenijih predmeta, kao što su heftarice, skladištenje podataka i
+            projektori – mi ćemo obezbjediti da Vaša kancelarija ima sve što Vam je potrebno, a istovremeno ponuditi
+            zadovoljavajuću cijenu. Za više informacija
+            o proizvodima i uslugama koje nudimo jednostavno nazovite +387 61 136 603 ili pregledajte naš online
+            katalog.</p>
+
+
+    </section>
+
+    <br>
+    <br>
+    <br>
+
+    <style>
+        @media screen and (max-width: 820px) {
+            .telefon {
+                display: none;
+            }
+
+            .navbar-nav a {
+                transition: none;
+            }
+
+            .navbar-nav a:hover,
+            .navbar-nav div:hover {
+                color: #007BFF !important;
+                transform: none;
+            }
+
+            .dropdown a.btn {
+               position: absolute;
+               left: 70px;
+               top: -40px;
+            }
+        }
+    </style>
+
+    <footer class="main-footer">
+        <div class="container main-footer-container">
+            <h1 class="telefon" style="position:absolute; margin-top: 25px; left: 200px;"><a href="index.html">
+                    UNI<span>BANS</span> </a></h1>
+            <ul class="nav footer-nav" style="display: block;">
+                <li><i class="fa fa-phone-square"></i> 061 136 603
+                </li>
+                <li><i class="fa fa-envelope"></i> unibans@prodaja.com
+                </li>
+                <li><i class="fa fa-clock-o"></i> Pon-Pet: 8:00-16:00
+                </li>
+                <li><i class="fa fa-search"></i> Milana Preloga 12</li>
+            </ul>
+        </div>
+    </footer>
+    <script src="js/search.js"></script>
+    <script>
+        var i = 0;
+
+        function otvoriDropdown() {
+            if (i == 0) {
+                document.getElementById("dropdown-content").style.display = "block";
+                i = 1;
+                return;
+            }
+            if (i == 1) {
+                document.getElementById("dropdown-content").style.display = "none";
+                i = 0;
+                return;
+            }
+        }
+    </script>
+</body>
+
+</html>
