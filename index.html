@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>UNIBANS</title>
+    <meta name="description" content="UNIBANS - Prodaja kancelarijskog materijala">
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/search.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+
+</head>
+
+<body>
+    <header class="main-header">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <h1 style="margin-right: 20px;"><a href="index.html"> UNI<span>BANS</span> </a></h1>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link active" href="index.html">POČETNA</a>
+                    <a class="nav-item nav-link" href="store.html">KATALOG</a>
+                    <div class="dropdown">
+                        <a class="btn" onclick="otvoriDropdown()">
+                            <i class="fa fa-caret-down" style="margin-left: -15px;"></i>
+                        </a>
+                        <div class="dropdown-content" id="dropdown-content">
+                            <a href="store.html#pisanje">Pribor za pisanje</a>
+                            <a href="store.html#biljeske">Bilješke</a>
+                            <a href="store.html#ostalo">Ostalo</a>
+                        </div>
+                    </div>
+                    <a class="nav-item nav-link" href="about.html">O NAMA</a>
+                    <a class="nav-item nav-link" href="contact.html">KONTAKT</a>
+                    <a class="nav-item nav-link" onclick="otvoriPretragu()"><img src="img-index/iconS.png"
+                            style="width: 20px;" alt="Pretrazivanje">PRETRAŽIVANJE</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="centar tour-row" style="color: black; ">
+        <b style="color: purple;"> Kancelarijski materijal je od suštinskog značaja za svakodnevno vođenje Vašeg
+            poslovanja</b>
+    </div>
+    <br>
+    <style>
+        .main-header {
+            background-color: darkslategray;
+        }
+
+        body {
+            background-image: url('img-index/fina3.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        .main-footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            opacity: 0.9;
+            width: 100%;
+        }
+
+        #carouselExampleIndicators {
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            width: 670px;
+            height: 470px;
+            margin-bottom: 30px;
+        }
+
+        .carousel-inner img {
+            width: 670px;
+            height: 400px;
+        }
+
+        .carousel-caption {
+            background-color: purple;
+            opacity: 0.75;
+            height: 70px;
+            border-radius: 10px 10px;
+        }
+
+        .d-md-block h5 {
+            color: black;
+        }
+
+        /* Dropdown Button */
+        .dropbtn {
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+        }
+
+        /* The container <div> - needed to position the dropdown content */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Dropdown Content (Hidden by Default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        /* Links inside the dropdown */
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {
+            background-color: #ddd
+        }
+
+        @media screen and (max-width: 820px) {
+            #carouselExampleIndicators {
+                width: 370px;
+                height: 250px;
+            }
+
+            .carousel-inner img {
+                width: 370px;
+                height: 250px;
+            }
+
+            .telefon {
+                display: none;
+            }
+
+            .navbar-nav a {
+                transition: none;
+            }
+
+            .navbar-nav a:hover,
+            .navbar-nav div:hover {
+                color: #007BFF !important;
+                transform: none;
+            }
+
+            .dropdown a.btn {
+                position: absolute;
+                left: 70px;
+                top: -40px;
+            }
+        }
+    </style>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <a href="store.html"><img class="d-block" src="img-index/mat.jpg" alt="Kancelarijski materijal"></a>
+                <div class="carousel-caption d-none d-md-block">
+                    <h3 style="font-weight:bold; color: white;">Zavirite u našu bogatu ponudu</h3>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <a href="store.html#pisanje"><img class="d-block" src="images-store/markeri.jpg"
+                        alt="Pribor za crtanje/pisanje">
+                </a>
+                <div class="carousel-caption d-none d-md-block">
+                    <h3 style="font-weight:bold; color: white;">Pribor za crtanje/pisanje</h3>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <a href="store.html#biljeske"><img class="d-block" src="images-store/sveska.jpg" alt="Bilješke"></a>
+                <div class="carousel-caption d-none d-md-block">
+                    <h3 style="font-weight:bold; color: white;">Bilješke</h3>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" style="background-color: black;" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" style="background-color: black;" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+
+    <footer class="main-footer">
+        <div class="container main-footer-container">
+            <h1 class="telefon" style="position:absolute; margin-top: 25px; left: 200px;"><a href="index.html">
+                    UNI<span>BANS</span> </a></h1>
+            <ul class="nav footer-nav" style="display: block;">
+                <li><i class="fa fa-phone-square"></i> 061 136 603
+                </li>
+                <li><i class="fa fa-envelope"></i> unibans@prodaja.com
+                </li>
+                <li><i class="fa fa-clock-o"></i> Pon-Pet: 8:00-16:00
+                </li>
+                <li><i class="fa fa-search"></i> Milana Preloga 12</li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="js/search.js"></script>
+    <script>
+        var i = 0;
+
+        function otvoriDropdown() {
+            if (i == 0) {
+                document.getElementById("dropdown-content").style.display = "block";
+                i = 1;
+                return;
+            }
+            if (i == 1) {
+                document.getElementById("dropdown-content").style.display = "none";
+                i = 0;
+                return;
+            }
+        }
+    </script>
+</body>
+
+</html>
